@@ -1,0 +1,46 @@
+body {
+    /* get the button vertucally and horizontally in the midlle of the page*/
+    /* using FLEX */
+    font-family: 'Roboto', sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /*vh=view height units */
+    height: 100vh;
+
+
+}
+
+button {
+    background: none;
+    color: black;
+    border: 2px solid;
+
+    /*put space in the inside of the button*/
+    /* 1em left and 2em on right*/
+    padding: 1em 2em;
+
+    font-size: 1em;
+
+    /*add transition to smooth out the moving of the button
+    when it goes up */
+    /*setting all the attributes of button hover on 0.25sec*/
+    transition: border-color 0.25s, color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+
+button:hover {
+    border-color: #97C8EB;
+    color: black;
+
+    /* box-shadow: y | blur radius| spread radius| color */
+    box-shadow: 0 0.5em 0.5em -0.4em #97C8EB;
+
+    /*make it move upwards -> translateY*/
+    transform: translatey(-0.25em);
+
+    /*change to the curson when you hover 
+    to make it clear that you interact with the button*/
+    cursor: pointer;
+}
